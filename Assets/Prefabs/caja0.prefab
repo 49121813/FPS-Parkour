@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5886313950966570126}
   - component: {fileID: 5836604957870582881}
   - component: {fileID: 181600714513905137}
+  - component: {fileID: 6629246555594350243}
   m_Layer: 0
   m_Name: caja0
   m_TagString: Untagged
@@ -62,6 +63,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6629246555594350243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5886313950966857902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5cf24da0c07d834daa331f636005673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4485158865085544984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,10 +82,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5886313950966570126}
     m_Modifications:
-    - target: {fileID: 100000, guid: 6c094488502429c4f8af15af576ff420, type: 3}
-      propertyPath: m_Name
-      value: caja1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6c094488502429c4f8af15af576ff420, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -116,6 +125,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 6c094488502429c4f8af15af576ff420, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6c094488502429c4f8af15af576ff420, type: 3}
+      propertyPath: m_Name
+      value: caja1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c094488502429c4f8af15af576ff420, type: 3}
