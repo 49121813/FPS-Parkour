@@ -18,24 +18,24 @@ public class InteractionArea : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Destroy(mercancia.gameObject);
-            StopInteraction();
+            if (mercancia)
+            {
+                mercancia.Comprar();
+                StopInteraction();
+            }
+            
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name);
-        interactionMessage.SetActive(true);
         mercancia = other.GetComponent<MercanciaScript>();
+       
         if (mercancia)
         {
             interactionMessage.SetActive(true);
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        StopInteraction();
     }
 
     void StopInteraction()
@@ -43,5 +43,11 @@ public class InteractionArea : MonoBehaviour
         interactionMessage.SetActive(false);
         mercancia = null;
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        StopInteraction();
+    }
+
 }
 

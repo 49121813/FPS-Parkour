@@ -9,16 +9,30 @@ public class MercanciaScript : MonoBehaviour
 
      void Start()
     {
-        moneyManager = FindObjectOfType<MoneyManager>();
+        if (moneyManager == null)
+        {
+            moneyManager = FindObjectOfType<MoneyManager>();
+        }
+      
     }
 
-    void OnCollisionEnter (Collision collision)
+    public void Comprar()
     {
-        if (collision.gameObject.name == "Player")
+        if (moneyManager != null)
         {
-            //actualizar dinero por la compra
-            moneyManager.UpdateMoney(-cost);
-            Destroy(gameObject);
+            if (moneyManager.money >= cost)
+            {
+                moneyManager.UpdateMoney(-cost);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.Log("No tenes plata :(");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("MoneyManager no encontrado");
         }
     }
 }
